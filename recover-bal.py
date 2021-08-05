@@ -86,24 +86,19 @@ def main():
                 print(address + ' ' + str(deposited))
         df.to_csv('accounts_state.csv', index=False)
 
-    # print("Get you key here: https://bscscan.com/login")
-    # API_KEY = input("Please enter your Bscscan api key: ")
-    # os.environ["BSCSCAN_TOKEN"] = API_KEY
+    print("Get you key here: https://bscscan.com/login")
+    API_KEY = input("Please enter your Bscscan api key: ")
+    os.environ["BSCSCAN_TOKEN"] = API_KEY
 
     SI = {"name":"SI", "address": str.lower("0xA9102b07f1F577D7c58E481a8CbdB2630637Ea48"),"pid": 5}
     DBI ={"name":"DBI", "address": str.lower("0xB04c92A631c8c350Cf81b5b54A0FE8dfbCC68677"), "pid": 4}
     LI = {"name":"LI", "address": str.lower("0x08Ba8CCc71D92055e4b370283AE07F773211Cc29"), "pid": 3}
     bep20_staked = [DBI, LI, SI]
     
-    # tx_data = get_tx_slice(7748604, 9687332, 20000)
-    # with open('data.json', 'w') as f:
-    #     f.write(json.dumps(tx_data))
+    tx_data = get_tx_slice(7748604, 9687332, 20000)
+    with open('data.json', 'w') as f:
+        f.write(json.dumps(tx_data))
 
-    # get_addresses("data.json")
-    # get_withdraw_tx_by_bep20(bep20_staked)
-    # get_balances_before_hack(bep20_staked)
-
-
-
-
-
+    get_addresses("data.json")
+    get_withdraw_tx_by_bep20(bep20_staked)
+    get_balances_before_hack(bep20_staked)
