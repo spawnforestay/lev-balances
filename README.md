@@ -3,7 +3,7 @@ How much was deposited on levyathan.finance and how much was withdrawn
 
 # How to use this script?
 
-1. Download everything - you'll need to install python3, [eth-brownie](https://eth-brownie.readthedocs.io/en/stable/install.html) in a virtualenv and install the packages needed in the ‘import‘ statements.
+1. Download everything - you'll need to install python3, [eth-brownie](https://eth-brownie.readthedocs.io/en/stable/install.html) in a virtualenv and `pip3 install` the packages needed in the `import` statements.
 
 2. Get a free bsc archive node at [moralis.io](https://moralis.io/) - great service by the way.
 
